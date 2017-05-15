@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--==============================================================================
+	           "GitHub HTML5 Pandoc Template" v1.2 — by Tristano Ajmone           
+	==============================================================================
+	(c) Tristano Ajmone, 2017, MIT License (MIT). Project's home repository:
+
+	- https://github.com/tajmone/pandoc-goodies
+
+	This template reuses source code taken from the following projects:
+
+	- GitHub Markdown CSS: © Sindre Sorhus, MIT License (MIT):
+	  https://github.com/sindresorhus/github-markdown-css
+
+	- Primer CSS: © 2016 GitHub Inc., MIT License (MIT):
+	  http://primercss.io/
+	==============================================================================-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">@font-face{font-family:octicons-link;src:url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff')}.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:16px;line-height:1.5;word-wrap:break-word;box-sizing:border-box;min-width:200px;max-width:980px;margin:0 auto;padding:45px}.markdown-body .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}.markdown-body a{background-color:transparent;-webkit-text-decoration-skip:objects;color:#0366d6;text-decoration:none}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body h1{margin:.67em 0}.markdown-body img{border-style:none}.markdown-body svg:not(:root){overflow:hidden}.markdown-body code,.markdown-body kbd,.markdown-body pre{font-family:monospace,monospace}.markdown-body input{font:inherit;margin:0;overflow:visible;font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body a:hover{text-decoration:underline}.markdown-body strong{font-weight:600}.markdown-body hr{box-sizing:content-box;overflow:hidden;background:0 0;border-bottom:1px solid #dfe2e5}.markdown-body hr::before{display:table;content:""}.markdown-body hr::after{display:table;clear:both;content:""}.markdown-body table{border-spacing:0;border-collapse:collapse;display:block;width:100%;overflow:auto}.markdown-body td,.markdown-body th{padding:0}.markdown-body blockquote{margin:0}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body dd{margin-left:0}.markdown-body code{font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace}.markdown-body pre{font:12px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;word-wrap:normal}.markdown-body .pl-0{padding-left:0!important}.markdown-body .pl-1{padding-left:4px!important}.markdown-body .pl-2{padding-left:8px!important}.markdown-body .pl-3{padding-left:16px!important}.markdown-body .pl-4{padding-left:24px!important}.markdown-body .pl-5{padding-left:32px!important}.markdown-body .pl-6{padding-left:40px!important}.markdown-body::before{display:table;content:""}.markdown-body::after{display:table;clear:both;content:""}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:0}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd{font-size:11px;box-shadow:inset 0 -1px 0 #959da5}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1{padding-bottom:.3em;font-size:2em;border-bottom:1px solid #eaecef}.markdown-body h2{padding-bottom:.3em;font-size:1.5em;border-bottom:1px solid #eaecef}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body code{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body code::after,.markdown-body code::before{letter-spacing:-.2em;content:"\00a0"}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:0 0;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code::after,.markdown-body pre code::before{content:normal}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fcfcfc;border:1px solid #c6cbd1;border-bottom-color:#959da5;border-radius:3px;box-shadow:inset 0 -1px 0 #959da5}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.markdown-body hr{border-bottom-color:#eee}.flash{position:relative;padding:16px;color:#246;background-color:#e2eef9;border:1px solid #bac6d3;border-radius:3px}.flash p:last-child{margin-bottom:0}.flash-messages{margin-bottom:24px}.flash-warn{color:#4c4a42;background-color:#fff9ea;border-color:#dfd8c2}.flash-error{color:#911;background-color:#fcdede;border-color:#d2b2b2}.flash-success{color:#22662c;background-color:#e2f9e5;border-color:#bad3be}.flash-plain{color:#4c4a42;background-color:#f5f5f5;border-color:#c1c1c1}</style>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="html/css/github.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<article class="markdown-body">
+<nav id="TOC">
+<ul>
+<li><a href="#pandoc-template">Pandoc Template</a><ul>
+<li><a href="#markdown-to-pdf">Markdown to PDF</a><ul>
+<li><a href="#articles">articles</a></li>
+<li><a href="#lecture-notes">lecture notes</a></li>
+</ul></li>
+<li><a href="#markdown-to-html5">Markdown to Html5</a><ul>
+<li><a href="#github-style">github style</a></li>
+<li><a href="#blue-toc-orange-toc">blue-toc &amp; orange-toc</a></li>
+<li><a href="#uikit">uikit</a></li>
+<li><a href="#bootstrap-style">bootstrap style</a></li>
+<li><a href="#bootstrap-adaptive">bootstrap adaptive</a></li>
+<li><a href="#more">More</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="pandoc-template">Pandoc Template</h1>
+<p>Templates for <a href="https://github.com/jgm/pandoc">pandoc</a>.</p>
+<p>Many templates refer to others. You can find most of them from pandoc wiki page-<a href="https://github.com/jgm/pandoc/wiki/User-contributed-templates">User contributed templates</a>.</p>
+<p>I change some details for my own use. If there is a breach of copyright or licence, please contact me.</p>
+<h2 id="markdown-to-pdf">Markdown to PDF</h2>
+<p>install BasicTeX: <code>brew cask install basictex</code> install package: <code>sudo tlmgr install titling lastpage</code></p>
+<h3 id="articles">articles</h3>
+<p>modified from <a href="https://github.com/tzengyuxio/pages">tzengyuxio’s pages</a></p>
+<pre class="shell"><code>pandoc markdown/pandoc.markdown -o pdf/pandoc-zhtw.pdf --toc --smart --template=custom --latex-engine=xelatex -V mainfont=&#39;PingFang SC&#39;</code></pre>
+<h3 id="lecture-notes">lecture notes</h3>
+<p><a href="https://github.com/Wandmalfarbe/pandoc-latex-template">pandoc-latex-template</a></p>
+<pre class="shell"><code>pandoc markdown/example.md -o pdf/example.pdf --from markdown --template eisvogel --latex-engine=xelatex -N --listings -V mainfont=&#39;PingFang SC&#39;</code></pre>
+<h4 id="preview">preview</h4>
+<p><a href="pdf/example.png"><img src="pdf/example.png" alt="A preview of a PDF rendered with the Eisvogel template." /></a></p>
+<h4 id="options">options</h4>
+<h5 id="numbered-sections">Numbered Sections</h5>
+<p>For PDFs with <a href="http://pandoc.org/MANUAL.html#options-affecting-specific-writers">numbered sections</a> use the <code>--number-sections</code> or <code>-N</code> option.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.pdf --template eisvogel --number-sections</code></pre></div>
+<h5 id="syntax-highlighting-with-listings">Syntax Highlighting with Listings</h5>
+<p>You can get syntax highlighting of delimited code blocks by using the LaTeX package listings with the option <code>--listings</code>. This example will produce the same syntax highlighting as in the example PDF.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.pdf --template eisvogel --listings</code></pre></div>
+<h5 id="syntax-highlighting-without-listings">Syntax Highlighting Without Listings</h5>
+<p>The following examples show <a href="http://pandoc.org/MANUAL.html#syntax-highlighting">syntax highlighting of delimited code blocks</a> without using listings. To see a list of all the supported highlight styles, type <code>pandoc --list-highlight-styles</code>.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.pdf --template eisvogel --highlight-style pygments</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.pdf --template eisvogel --highlight-style kate</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.pdf --template eisvogel --highlight-style espresso</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.pdf --template eisvogel --highlight-style tango</code></pre></div>
+<h5 id="standalone-latex-document">Standalone LaTeX Document</h5>
+<p>To produce a standalone LaTeX document for compiling with any LaTeX editor use <code>.tex</code> as an output file extension.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.tex --template eisvogel</code></pre></div>
+<h5 id="changing-the-document-language">Changing the Document Language</h5>
+<p>The default language of this template is German. The <code>lang</code> variable identifies the main language of the document, using a code according to <a href="https://tools.ietf.org/html/bcp47">BCP 47</a> (e.g. <code>en</code> or <code>en-GB</code>). For an incomplete list of the supported language code see <a href="http://tug.ctan.org/language/hyph-utf8/doc/generic/hyph-utf8/hyphenation.pdf">the documentation for the hyph-utf8 package (Section 2)</a>. The following example changes the language to British English:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.pdf --template eisvogel -V lang=en-GB</code></pre></div>
+<p>The following example changes the language to American English:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">pandoc</span> example.md -o example.pdf --template eisvogel -V lang=en-US</code></pre></div>
+<h2 id="markdown-to-html5">Markdown to Html5</h2>
+<h3 id="github-style">github style</h3>
+<p><a href="https://github.com/tajmone/pandoc-goodies/tree/master/templates/html5/github">pandoc-goodies</a></p>
+<h4 id="demo">demo</h4>
+<p><a href="index.html">README</a></p>
+<h4 id="command">command</h4>
+<pre class="shell"><code>pandoc -t html5 -f markdown -s -S --toc --toc-depth 3 --template github.html5 --css html/css/github.css README.md -o index.html</code></pre>
+<h3 id="blue-toc-orange-toc">blue-toc &amp; orange-toc</h3>
+<p><a href="https://github.com/tzengyuxio/pages">tzengyuxio’s pages</a></p>
+<h4 id="demo-1">demo</h4>
+<p><a href="http://pages.tzengyuxio.me/pandoc/">Pandoc’s Markdown 語法中文翻譯</a></p>
+<p><a href="http://pages.tzengyuxio.me/articles/how-to-be-more-productive.html">如何提高生產力</a></p>
+<h4 id="command-1">command</h4>
+<pre class="shell"><code># stylesheets/blue-toc.css needed
+pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template blue-toc markdown/pandoc.markdown -o pandoc.html
+# stylesheets/orange-toc.css needed
+pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template orange-toc markdown/how-to-be-more-productive.markdown -o productive.html</code></pre>
+<h3 id="uikit">uikit</h3>
+<p><a href="https://github.com/diversen/pandoc-uikit">pandoc-uikit</a></p>
+<p><strong>the toc can float, and I like this style</strong></p>
+<h4 id="demo-2">demo</h4>
+<p><a href="html/uikit.html">Manual</a></p>
+<h4 id="command-2">command</h4>
+<pre class="shell"><code># js/uikit stylesheets/uikit.css needed
+pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template uikit https://raw.githubusercontent.com/jgm/pandoc/master/MANUAL.txt -o html/uikit.html</code></pre>
+<h3 id="bootstrap-style">bootstrap style</h3>
+<p><a href="https://github.com/tonyblundell/pandoc-bootstrap-template">pandoc-bootstrap-template</a></p>
+<h4 id="demo-3">demo</h4>
+<p><a href="html/productive.html">如何提高生產力</a></p>
+<h4 id="command-3">command</h4>
+<pre class="shell"><code>pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template bootstrap --css css/bootstrap.css markdown/how-to-be-more-productive.markdown -o html/productive.html</code></pre>
+<h3 id="bootstrap-adaptive">bootstrap adaptive</h3>
+<p><a href="https://github.com/diversen/pandoc-bootstrap-adaptive-template">pandoc-bootstrap-adaptive-template</a></p>
+<h4 id="demo-4">demo</h4>
+<p><a href="html/bootstrap-adaptive.html">Manual</a></p>
+<h4 id="command-4">command</h4>
+<pre class="shell"><code>pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template bootstrap-adaptive.html5 --css css/bootstrap-adaptive.css https://raw.githubusercontent.com/jgm/pandoc/master/MANUAL.txt -o html/bootstrap-adaptive.html</code></pre>
+<h3 id="more">More</h3>
+<p>add style to table <code>sed -i '' 's/&lt;table&gt;/&lt;table class=&quot;table table-bordered table-condensed&quot;&gt;/' index.html</code></p>
+</article>
+</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+    font-size:16px;
+    line-height:24px;
+}
+
+.sidebar-nav-fixed {
+    position:fixed;
+    top:84px;
+    width:16.48%;
+}
+
+@media (max-width: 767px) {
+    .sidebar-nav-fixed {
+        width:auto;
+    }
+}
+
+@media (max-width: 979px) {
+    .sidebar-nav-fixed {
+        position:static;
+        width:auto;
+    }
+}
+
+@media (min-width: 980px) {
+    .title {
+        width:940px;
+    }
+    .container-fluid {
+        width:940px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+    background: none;
+    font-weight: normal;
+    margin: 0;
+    overflow: hidden;
+    padding-top: .5em;
+    padding-bottom: .17em;
+}
+
+h1 {
+    font-size:32px;
+    border-bottom: 4px double #aaa;
+}
+
+h2 {
+    font-size:24px;
+    border-bottom: 1px solid #aaa;
+}
+
+h3 {
+    font-size:21px;
+}
+
+h1, h2 {
+    margin-bottom:.6em;
+    line-height:1.1em;
+}
+
+h3, h4, h5 {
+    margin-bottom:.3em;
+}
+
+#TOC > ul {
+    margin:0;
+}
+
+#TOC > ul > li {
+    font-size:16px;
+    line-height:24px;
+    list-style-type:none;
+}
+
+#TOC > ul > li > ul > li {
+    font-size:16px;
+    line-height:24px;
+}
+
+#TOC > ul > li > ul > li > ul {
+    display:none;
+}
+
+blockquote > p {
+    font-size:16px;
+}
+
+.table {
+    width:auto;
+}
+
+sup, sub {
+    line-height: 1em;
+}
+
+header {
+    position:static;
+    width:100%;
+    overflow:visible;
+    display:block;
+
+
+    background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+    background-repeat: repeat-x;
+    border: 1px solid #d4d4d4;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color:#555555;
+    border-bottom:0;
+    font-size:20px;
+    padding: .5em;
+    margin-bottom:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+nav li:focus {
+    background-color:#EEEEEE;
+}
+
+nav a:hover {
+    text-decoration:none;
+}
+
+.title > a {
+    color:#555555;
+}
+
+.title a:hover {
+    text-decoration:none;
+}
+
+.container-fluid {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 2em 0 4em 0;
+}
