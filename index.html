@@ -69,6 +69,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <nav id="TOC">
 <ul>
 <li><a href="#pandoc-template">Pandoc Template</a><ul>
+<li><a href="#todo">TODO</a></li>
 <li><a href="#markdown-to-pdf">Markdown to PDF</a><ul>
 <li><a href="#articles">articles</a></li>
 <li><a href="#lecture-notes">lecture notes</a></li>
@@ -88,6 +89,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Templates for <a href="https://github.com/jgm/pandoc">pandoc</a>.</p>
 <p>Many templates refer to others. You can find most of them from pandoc wiki page-<a href="https://github.com/jgm/pandoc/wiki/User-contributed-templates">User contributed templates</a>.</p>
 <p>I change some details for my own use. If there is a breach of copyright or licence, please contact me.</p>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>[ ] orange-toc 移动端目录样式不对，参考 blue-toc</li>
+<li>[ ] pandoc-resume</li>
+</ul>
 <h2 id="markdown-to-pdf">Markdown to PDF</h2>
 <p>install BasicTeX: <code>brew cask install basictex</code> install package: <code>sudo tlmgr install titling lastpage</code></p>
 <h3 id="articles">articles</h3>
@@ -153,7 +159,7 @@ pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template uikit https://r
 <h3 id="bootstrap-adaptive">bootstrap adaptive</h3>
 <p><a href="https://github.com/diversen/pandoc-bootstrap-adaptive-template">pandoc-bootstrap-adaptive-template</a></p>
 <h4 id="demo-4">demo</h4>
-<p><a href="html/bootstrap-adaptive.html">Manual</a></p>
+<p><a href="html/bootstrap-adaptive.html">manual</a></p>
 <h4 id="command-4">command</h4>
 <pre class="shell"><code>pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template bootstrap-adaptive.html5 --css css/bootstrap-adaptive.css https://raw.githubusercontent.com/jgm/pandoc/master/MANUAL.txt -o html/bootstrap-adaptive.html</code></pre>
 <h3 id="more">More</h3>

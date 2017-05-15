@@ -6,6 +6,11 @@ Many templates refer to others. You can find most of them from pandoc wiki  page
 
 I change some details for my own use. If there is a breach of copyright or licence, please contact me.
 
+## TODO
+
+- [ ] orange-toc 移动端目录样式不对，参考 blue-toc
+- [ ] pandoc-resume
+
 ## Markdown to PDF
 
 install BasicTeX: `brew cask install basictex`
@@ -167,7 +172,7 @@ pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template bootstrap --css
 
 #### demo
 
-[Manual](html/bootstrap-adaptive.html)
+[manual](html/bootstrap-adaptive.html)
 
 #### command
 
