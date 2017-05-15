@@ -2,14 +2,15 @@
 
 Templates for [pandoc](https://github.com/jgm/pandoc).
 
-Many templates refer to others. You can find most of them from pandoc wiki  page-[User contributed templates](https://github.com/jgm/pandoc/wiki/User-contributed-templates).
+Many templates refer to others'. You can find most of them from pandoc wiki  page--[User contributed templates](https://github.com/jgm/pandoc/wiki/User-contributed-templates).
 
-I change some details for my own use. If there is a breach of copyright or licence, please contact me.
+I change some details for my own use, make disrepair templates work again and add chinese support. If there is a breach of copyright or licence, please contact me.
 
 ## TODO
 
 - [ ] orange-toc 移动端目录样式不对，参考 blue-toc
 - [ ] pandoc-resume
+- [ ] pandoc markdown to-do to html
 
 ## Markdown to PDF
 
@@ -28,13 +29,15 @@ pandoc markdown/pandoc.markdown -o pdf/pandoc-zhtw.pdf --toc --smart --template=
 
 [pandoc-latex-template](https://github.com/Wandmalfarbe/pandoc-latex-template)
 
+Add Chinese support.
+
 ```shell
 pandoc markdown/example.md -o pdf/example.pdf --from markdown --template eisvogel --latex-engine=xelatex -N --listings -V mainfont='PingFang SC'
 ```
 
 #### preview
 
-[![A preview of a PDF rendered with the Eisvogel template.](pdf/example.png)](pdf/example.png)
+[example](pdf/example.pdf)
 
 #### options
 
@@ -141,7 +144,7 @@ pandoc -t html5 -f markdown -s -S --toc --toc-depth 2 --template orange-toc mark
 
 #### demo
 
-[Manual](html/uikit.html)
+[manual](html/uikit.html)
 
 #### command
 
