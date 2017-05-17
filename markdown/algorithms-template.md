@@ -177,7 +177,6 @@ for (int i = 0; i < N; ++i) {
 int n;
 ll w[MAX_N], v[MAX_N], W;
 Pll ps[1 << (MAX_N / 2)]; // (w, v);
-
 void solve() {
     int n2 = n / 2;
     for (int i = 0; i < 1 << n2; ++i) {
@@ -194,7 +193,6 @@ void solve() {
     for (int i = 1; i < 1 << n2; ++i)
         if (ps[m - 1].second < ps[i].second)
             ps[m++] = ps[i];
-
     ll res = 0;
     for (int i = 0; i < 1 << (n - n2); ++i) {
         ll sw = 0, sv = 0;
@@ -267,14 +265,12 @@ int sub = sup;
 do {
     sub = (sub - 1) & sup;
 } while (sub != sup); // -1 & sup = sup;
-
 // 势为 k 的集合枚举
 int comb = (1 << k) - 1;
 while (comb < 1 << n) {
     int x = comb & -comb, y = comb + x;
     comb = ((comb & ~y) / x >> 1) | y;
 }
-
 // 排列组合
 do {
 
@@ -339,7 +335,6 @@ struct node {
     int val;
     node *lch, rch;
 };
-
 node *insert(node *p, int x) {
     if (p == NULL) {
         node *q = new node;
@@ -482,7 +477,6 @@ int query(int a, int b, int k, int l, int r) {
 //Sparse Table
 const int MAX_N = 1e5 + 10;
 const int MAX_K = 31 - __builtin_clz(MAX_N);
-
 int n, ST[MAX_N][MAX_K + 1], A[MAX_N];
 void build(int N) {
     for (int i = 0; i < N; ++i)
@@ -642,7 +636,6 @@ int prime() {
     }
     return res;
 }
-
 bool cmp(const edge e1, const edge e2) {
     return e1.dis < e2.dis;
 }
@@ -894,10 +887,8 @@ int stoer_wagner() {
 ```cpp
 // LCA--Doubling
 const int MAX_LOG_V = 32 - __builtin_clz(MAX_V);
-
 vector<int> G[MAX_V];
 int root, parent[MAX_LOG_V][MAX_V], depth[MAX_V];
-
 void dfs(int v, int p, int d) {
     parent[0][v] = p;
     depth[v] = d;
@@ -925,7 +916,6 @@ int lca(int u, int v) {
 // LCA--RMQ
 vector<int> G[MAX_V];
 int root, vs[MAX_V * 2 - 1], depth[MAX_V * 2 - 1], id[MAX_V];
-
 int ST[2 * MAX_V][MAX_K];
 void rmq_init(int* A, int N) {
     for (int i = 0; i < N; i++)
@@ -1142,7 +1132,6 @@ ll lucas(ll n, ll k, const ll &p) {
 typedef vector<int> vec;
 typedef vector<vec> mat;
 mat G(MAX_N);
-
 mat mat_mul(mat &A, mat &B) {
     mat C(A.size(), vec(B[0].size()));
     for (int i = 0; i < A.size(); ++i)
@@ -1290,17 +1279,14 @@ void find_factor(ll n) {
 const int MAX_N = 5e6 + 2;
 bool np[MAX_N];
 int prime[MAX_N], pi[MAX_N];
-int getprime()
-{
+int getprime() {
     int cnt = 0;
     np[0] = np[1] = true;
     pi[0] = pi[1] = 0;
-    for(int i = 2; i < MAX_N; ++i)
-    {
+    for(int i = 2; i < MAX_N; ++i) {
         if(!np[i]) prime[++cnt] = i;
         pi[i] = cnt;
-        for(int j = 1; j <= cnt && i * prime[j] < MAX_N; ++j)
-        {
+        for(int j = 1; j <= cnt && i * prime[j] < MAX_N; ++j) {
             np[i * prime[j]] = true;
             if(i % prime[j] == 0)   break;
         }
@@ -1329,8 +1315,7 @@ int sqrt3(ll x) {
     while(r * r * r <= x)   ++r;
     return int(r - 1);
 }
-ll getphi(ll x, int s)
-{
+ll getphi(ll x, int s) {
     if(s == 0)  return x;
     if(s <= M)  return phi[x % sz[s]][s] + (x / sz[s]) * phi[sz[s]][s];
     if(x <= prime[s]*prime[s])   return pi[x] - s + 1;
@@ -1366,8 +1351,7 @@ ll lehmer_pi(ll x) {
 int main() {
     init();
     ll n;
-    while(~scanf("%lld",&n))
-    {
+    while(~scanf("%lld",&n)) {
         printf("%lld\n",lehmer_pi(n));
     }
     return 0;
@@ -1427,7 +1411,6 @@ void moebius() {
         }
     }
 }
-
 map<int, int> moebius(int n) {
     map<int, int> res;
     vector<int> primes;
@@ -1438,7 +1421,6 @@ map<int, int> moebius(int n) {
         }
     }
     if (n != 1) primes.push_back(n);
-
     int m = primes.size();
     for (int i = 0; i < (1 << m); ++i) {
         int mu = 1, d = 1;
@@ -1459,39 +1441,32 @@ map<int, int> moebius(int n) {
 const double eps = 1e-8;
 typedef vector<double> vec;
 typedef vector<vec> mat;
-
 vec gauss_joedan(const mat &A, const vec& b) {
     int n = A.size();
     mat B(n, vec(n + 1));
     for (int i = 0; i < n; ++i)
         for (int j = 0; j < n; ++j) B[i][j] = A[i][j];
     for (int i = 0; i < n; ++i) B[i][n] = b[i];
-
     for (int i = 0; i < n; ++i) {
         int pivot = i;
         for (int j = i; j < n; ++j)
             if (abs(B[j][i]) > abs(B[pivot][i])) pivot = j;
         if (i != pivot) swap(B[i], B[pivot]);
-
         if (abs(B[i][i]) < eps) return vec();
-
         for (int j = i + 1; j <= n; ++j) B[i][j] /= B[i][i];
         for (int j = 0; j < n; ++j) if (i != j)
             for (int k = i + 1; k <= n; ++k) B[j][k] -= B[j][i] * B[i][k];
     }
-
     vec x(n);
     for (int i = 0; i < n; ++i) x[i] = B[i][n];
     return x;
 }
-
 vec gauss_joedan_xor(const mat& A, const vec& b) {
     int n = A.size();
     mat B(n, vec(n + 1));
     for (int i = 0; i < n; ++i)
         for (int j = 0; j < n; ++j) B[i][j] = A[i][j];
     for (int i = 0; i < n; ++i) B[i][n] = b[i];
-
     for (int i = 0; i < n; ++i) {
         int pivot = i;
         for (int j = i; j < n; ++j)
@@ -1505,7 +1480,6 @@ vec gauss_joedan_xor(const mat& A, const vec& b) {
                 for (int k = i + 1; k <= n; ++k) B[j][k] ^= B[i][k];
             }
     }
-
     vec x(n);
     for (int i = 0; i < n; ++i) x[i] = B[i][n];
     return x;
@@ -1518,16 +1492,7 @@ vec gauss_joedan_xor(const mat& A, const vec& b) {
 
 # String #
 
-1. Hash
-2. KMP
-3. Extend KMP
-4. trie树 poj2001 2503 3630 1056 hdu 1075 1251 1247 1298 1671
-5. Manacher 算法
-6. AC自动机
-7. 后缀数组
-8. 后缀树
-9. 后缀自动机
-10. 回文自动机
+1. Hash 2. KMP 3. Extend KMP 4. trie树 poj2001 2503 3630 1056 hdu 1075 1251 1247 1298 1671 5. Manacher 算法 6. AC自动机 7. 后缀数组 8. 后缀树 9. 后缀自动机 10. 回文自动机
 
 ```c++
 // 最小最大表示法：
@@ -1585,7 +1550,6 @@ int kmp(const string &tar, const string &pat) {
 int n, k;
 int lcp[MAX_N], sa[MAX_N];
 int rnk[MAX_N], tmp[MAX_N];
-
 bool compare_sa(int i, int j) {
     if (rnk[i] != rnk[j]) return rnk[i] < rnk[j];
     else {
@@ -1626,7 +1590,6 @@ void construct_lcp(string S, int *sa, int *lcp) {
 ```c++
 // AC 自动机
 int ans[MAX_N], d[MAX_N];
-
 struct Trie {
     int nxt[MAX_N][26], fail[MAX_N], end[MAX_N];
     int root, L;
@@ -1695,7 +1658,6 @@ struct Trie {
         }
     }
 };
-
 Trie ac;
 ```
 
@@ -1714,19 +1676,15 @@ struct edge {
 };
 int G[MAX_N], En, N, M, T;
 edge E[MAX_N * 2];
-
 void add_edge(int from, int to, int damage, int length) {
     edge e = {to, damage, length, G[from]};
     E[En] = e;
     G[from] = En++;
 }
-
 int ans, subtree_size[MAX_N];
 bool flag[MAX_N];
-
 int s, t;
 Pii ds[MAX_N];
-
 int compute_subtree_size(int v, int p) {
     int c = 1;
     for (int j = G[v]; ~j; j = E[j].next) {
@@ -1736,7 +1694,6 @@ int compute_subtree_size(int v, int p) {
     }
     return subtree_size[v] = c;
 }
-
 Pii search_centroid(int v, int p, int t) {
     Pii res = Pii(INT_MAX, -1);
     int s = 1, m = 0;
@@ -1751,7 +1708,6 @@ Pii search_centroid(int v, int p, int t) {
     res = min(res, Pii(m, v));
     return res;
 }
-
 void enumrate_path(int v, int p, int damage, int length) {
     ds[t++] = Pii(damage, length);
     for (int j = G[v]; ~j; j = E[j].next) {
@@ -1762,7 +1718,6 @@ void enumrate_path(int v, int p, int damage, int length) {
         }
     }
 }
-
 void remove_useless(int s, int &t) {
     if (s == t) return;
     int tt;
@@ -1773,7 +1728,6 @@ void remove_useless(int s, int &t) {
     }
     t = tt;
 }
-
 void solve_sub_problem(int v) {
     compute_subtree_size(v, -1);
     int c = search_centroid(v, -1, subtree_size[v]).second;
@@ -1782,7 +1736,6 @@ void solve_sub_problem(int v) {
         if (flag[E[j].to]) continue;
         solve_sub_problem(E[j].to);
     }
-
     s = t = 0;
     for (int j = G[c]; ~j; j = E[j].next) {
         int w = E[j].to;
@@ -1802,7 +1755,6 @@ void solve_sub_problem(int v) {
         remove_useless(0, t);
         s = t;
     }
-
     flag[c] = false;
 }
 ```
