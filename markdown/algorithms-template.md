@@ -110,7 +110,8 @@ long lis(int n) {
     int dp[MAX_N];
     fill(dp, dp + n, INF);
     for (int i = 0; i < n; ++i)
-        *lower_bound(dp, dp + n, A[i]) = A[i];// lds: -A[i]; ln: upper_bound
+        *lower_bound(dp, dp + n, A[i]) = A[i];
+        // lds: -A[i]; ln: upper_bound
     return lower_bound(dp, dp + n, INF) - dp;
 }
 ```
@@ -171,7 +172,7 @@ for (int i = 0; i < N; ++i) {
 
 + 超大背包
 
-    + $1 \leq n \leq 40$，$1 \leq w_i, v_i \leq 10^{15}$, $ 1 \leq W \leq 10^{15}$
+    + $1 \leq n \leq 40$，$1 \leq w_i, v_i \leq 10^{15}$, $1 \leq W \leq 10^{15}$
 
 ```c++
 int n;
@@ -202,7 +203,8 @@ void solve() {
                 sv += v[n2 + j];
             }
         if (sw <= W) {
-            ll tv = (lower_bound(ps, ps + m, make_pair(W - sw, INF)) - 1)->second;
+            ll tv = (lower_bound(ps, ps + m, \
+                make_pair(W - sw, INF)) - 1)->second;
             res = max(res, sv + tv);
         }
     }
@@ -484,7 +486,7 @@ void build(int N) {
     int k = 31 - __builtin_clz(N);
     for (int j = 1; j <= k; ++j)
         for (int i = 0; i <= N - (1 << j); ++i)
-            ST[i][j] = min(ST[i][j - 1i], ST[i + (1 << (j - 1))][j - 1]);
+            ST[i][j] = min(ST[i][j - 1], ST[i + (1 << (j - 1))][j - 1]);
 }
 int query(int l, int r) {
     if (l >= r) return 0;
@@ -530,7 +532,8 @@ void floyed() {
                 dis[i][j] = min(dis[i][k] + dis[k][j], dis[i][j]);
 }
 void dijkstra(int s) {
-    priority_queue<Pii, vector<Pii>, greater<Pii> > que;// fisrt 是最短距离，second 是顶点编号
+    // fisrt 是最短距离，second 是顶点编号
+    priority_queue<Pii, vector<Pii>, greater<Pii> > que;
     fill(dist, dist + V, INF);
     dist[s] = 0; que.push(Pii(0, s));
     while (!que.empty()) {
@@ -818,7 +821,8 @@ int min_cost_flow(int s, int t, int f) {
             if (dist[v] < p.first) continue;
             rep(i, 0, G[v].size()) {
                 edge &e = G[v][i];
-                if (e.cap > 0 && dist[e.to] > dist[v] + e.cost + h[v] - h[e.to]) {
+                if (e.cap > 0 \
+                  && dist[e.to] > dist[v] + e.cost + h[v] - h[e.to]) {
                     dist[e.to] = dist[v] + e.cost + h[v] - h[e.to];
                     prevv[e.to] = v;
                     preve[e.to] = i;
@@ -930,7 +934,9 @@ void rmq_init(int* A, int N) {
 int query(int l, int r) {
     if (l >= r) return -1;
     int k = 31 - __builtin_clz(r - l);
-    return (depth[ST[l][k]] <= depth[ST[r - (1 << k)][k]]) ? ST[l][k] : ST[r - (1 << k)][k];
+    if (depth[ST[l][k]] <= depth[ST[r - (1 << k)][k]])
+        return ST[l][k];
+    else return ST[r - (1 << k)][k];
 }
 void dfs(int v, int p, int d, int &k) {
     id[v] = k;
@@ -986,11 +992,13 @@ int convex_hull(Point *ps, int n, Point *ch) {
     sort(ps, ps + n);
     int k = 0;
     for (int i = 0; i < n; ++i) {
-        while (k > 1 && (ch[k - 1] - ch[k - 2].det(ps[i] - ch[k - 1])) <= 0) k--;
+        while (k > 1 && (ch[k - 1] - ch[k - 2].det(ps[i] - ch[k - 1])) <= 0) 
+            k--;
         ch[k++] = ps[i];
     }
     for (int i = n - 2, t = k; i >= 0; --i) {
-        while (k > t && (ch[k - 1] - ch[k - 2].det(ps[i] - ch[k - 1])) <= 0) k--;
+        while (k > t && (ch[k - 1] - ch[k - 2].det(ps[i] - ch[k - 1])) <= 0)
+            k--;
         ch[k++] = ps[i];
     }
     return k - 1;
@@ -1059,7 +1067,8 @@ template<typename T> T mod_pow(T x, T n, T mod) {
         n >>= 1;
     }
     return res;
-    // return b ? mod_pow(a * a % mod, b >> 1, mod) * (b & 1 ? a : 1) % mod : 1;
+    // return b ? \
+        mod_pow(a * a % mod, b >> 1, mod) * (b & 1 ? a : 1) % mod : 1;
 }
 template<typename T> T mod_inverse(T a, T m) {
     T x, y;
@@ -1073,7 +1082,8 @@ void init_inverse() {
         inv[i] = (MOD - (MOD / i) * inv[MOD % i] % MOD) % MOD;
 }
 //A[i] * x % M[i] = B[i];
-std::pair<int, int> linear_congruence(const std::vector<int> &A, const std::vector<int> &B, const std::vector<int> &M) {
+std::pair<int, int> linear_congruence(const std::vector<int> &A, const std:: \
+    vector<int> &B, const std::vector<int> &M) {
         // wa 了把中间量开大？* 溢出
         int x = 0, m = 1;
         for(int i = 0; i < A.size(); i++) {
@@ -1116,7 +1126,9 @@ int mod_comb(int n, int k, int p) {
     if (n < 0 || k < 0 || n < k) return 0;
     if (n == 0) return 1;
     int e1, e2, e3;
-    int a1 = mod_fact(n, p, e1), a2 = mod_fact(k, p, e2), a3 = mod_fact(n - k, p, e3);
+    int a1 = mod_fact(n, p, e1);
+    int a2 = mod_fact(k, p, e2);
+    int a3 = mod_fact(n - k, p, e3);
     if (e1 > e2 + e3) return 0;
     return a1 * mod_inverse(a2 * a3 % p, p) % p;
 }
@@ -1137,7 +1149,8 @@ mat mat_mul(mat &A, mat &B) {
     for (int i = 0; i < A.size(); ++i)
         for (int k = 0; k < B.size(); ++k)
             for (int j = 0; j < B[0].size(); ++j)
-                C[i][j] = (C[i][j] + A[i][k] % MOD * B[k][j] % MOD + MOD) % MOD;
+                C[i][j] = (C[i][j] + A[i][k] % MOD * B[k][j] % MOD \
+                 + MOD) % MOD;
     return C;
 }
 mat mat_pow(mat A, ll n) {
@@ -1203,8 +1216,10 @@ void segment_sieve(ll l, ll r) {
     for (int i = 0; i < r - l; ++i) segPrime[i] = true;
     for (int i = 2; (ll)i * i < r; ++i) {
         if (segPrimeSmall[i]) {
-            for (int j = 2 * i; (ll)j * j <= r; j += i) segPrimeSmall[j] = false;
-            for (ll j = max(2ll, (l + i - 1) / i) * i; j < r; j += i) segPrime[j - l] = false;
+            for (int j = 2 * i; (ll)j * j <= r; j += i) 
+                segPrimeSmall[j] = false;
+            for (ll j = max(2ll, (l + i - 1) / i) * i; j < r; j += i) 
+                segPrime[j - l] = false;
         }
     }
 }
@@ -1302,7 +1317,8 @@ void init() {
     for(int i = 0; i <= PM; ++i)  phi[i][0] = i;
     for(int i = 1; i <= M; ++i) {
         sz[i] = prime[i] * sz[i - 1];
-        for(int j = 1; j <= PM; ++j) phi[j][i] = phi[j][i - 1] - phi[j / prime[i]][i - 1];
+        for(int j = 1; j <= PM; ++j) 
+            phi[j][i] = phi[j][i - 1] - phi[j / prime[i]][i - 1];
     }
 }
 int sqrt2(ll x) {
@@ -1330,7 +1346,8 @@ ll getphi(ll x, int s) {
 ll getpi(ll x) {
     if(x < MAX_N)   return pi[x];
     ll ans = getphi(x, pi[sqrt3(x)]) + pi[sqrt3(x)] - 1;
-    for(int i = pi[sqrt3(x)] + 1, ed = pi[sqrt2(x)]; i <= ed; ++i) ans -= getpi(x / prime[i]) - i + 1;
+    for(int i = pi[sqrt3(x)] + 1, ed = pi[sqrt2(x)]; i <= ed; ++i) 
+        ans -= getpi(x / prime[i]) - i + 1;
     return ans;
 }
 ll lehmer_pi(ll x) {
@@ -1344,7 +1361,8 @@ ll lehmer_pi(ll x) {
         sum -= lehmer_pi(w);
         if (i > c) continue;
         ll lim = lehmer_pi(sqrt2(w));
-        for (int j = i; j <= lim; j++) sum -= lehmer_pi(w / prime[j]) - (j - 1);
+        for (int j = i; j <= lim; j++) 
+            sum -= lehmer_pi(w / prime[j]) - (j - 1);
     }
     return sum;
 }
@@ -1376,7 +1394,8 @@ void euler_phi_sieve() {
     for (int i = 0; i < MAX_N; ++i) euler[i] = i;
     for (int i = 2; i < MAX_N; ++i)
         if (euler[i] == i)
-            for (int j = i; j < MAX_N; j += i) euler[j] = euler[j] / i * (i - 1);
+            for (int j = i; j < MAX_N; j += i) 
+                euler[j] = euler[j] / i * (i - 1);
 }
 ```
 
@@ -1568,7 +1587,8 @@ void construct_sa(string S, int *sa) {
         sort(sa, sa + n + 1, compare_sa);
         tmp[sa[0]] = 0;
         for (int i = 1; i <= n; i++)
-            tmp[sa[i]] = tmp[sa[i - 1]] + (compare_sa(sa[i - 1], sa[i]) ? 1 : 0);
+            tmp[sa[i]] = tmp[sa[i - 1]] + \
+             (compare_sa(sa[i - 1], sa[i]) ? 1 : 0);
         memcpy(rnk, tmp, sizeof(int) * (n + 1));
     }
 }
