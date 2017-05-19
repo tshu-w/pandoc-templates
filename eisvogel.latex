@@ -74,6 +74,14 @@ $endif$
   \parindent 0em    % 段落縮進
   \setlength{\parskip}{20pt}  % 段落之間的距離
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+%\defaultfontfeatures{Mapping=tex-text}  % 启用tex风格字符
+%\setmainfont{Times New Roman}           % 英文缺省字体
+%\setsansfont{Arial}                                 % 英文无衬线字体
+%\setmonofont{Courier New}                   % 英文打字机（等宽）字体
+%\setCJKmainfont{SimSun}                     % 中文缺省字体，
+%\setCJKsansfont{SimHei}                      % 中文无衬线字体，   调用命令： \sffamily
+%\setCJKmonofont{FangSong_GB2312}     % 中文打字机（等宽）字体， 调用命令： \ttfamily
+
 $for(fontfamilies)$
   \newfontfamily{$fontfamilies.name$}[$fontfamilies.options$]{$fontfamilies.font$}
 $endfor$
