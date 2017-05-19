@@ -1,6 +1,10 @@
-% ICPC Template
-% Voleking
-% 2017-05-17
+---
+title: "ICPC Template"
+author: [Voleking]
+date: 2017-05-17
+subtitle: ""
+titlepage: true
+...
 
 # Tips #
 
