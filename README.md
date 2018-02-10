@@ -2,7 +2,7 @@
 
 Templates for [pandoc](https://github.com/jgm/pandoc).
 
-Many templates refer to others'. You can find most of them from pandoc wiki  page--[User contributed templates](https://github.com/jgm/pandoc/wiki/User-contributed-templates).
+Many templates based on others'. You can find most of them from pandoc wiki  page--[User contributed templates](https://github.com/jgm/pandoc/wiki/User-contributed-templates).
 
 I change some details for my own use, make disrepair templates work again and add chinese support. If there is a breach of copyright or licence, please contact me.
 
