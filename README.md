@@ -10,9 +10,6 @@ I change some details for my own use, make disrepair templates work again and ad
 
 - [ ] orange-toc 移动端目录样式不对，参考 blue-toc
 - [ ] articles 公式什么的都不支持
-- [ ] lecture note 封面
-- [ ] makefile转换
-- [ ] pandoc-resume
 
 ## Markdown to PDF
 
@@ -24,7 +21,7 @@ install package: `sudo tlmgr install titling lastpage`
 modified from [tzengyuxio's pages](https://github.com/tzengyuxio/pages)
 
 ```shell
-pandoc markdown/pandoc.markdown -o pdf/pandoc-zhtw.pdf --toc --smart --template article --latex-engine=xelatex -V mainfont='PingFang SC'
+pandoc markdown/pandoc.markdown -o pdf/pandoc-zhtw.pdf --toc --smart --template article --pdf-engine=xelatex -V mainfont='PingFang SC'
 ```
 
 ### beamer slide
@@ -40,7 +37,7 @@ pandoc -t SLIDES -o example.pdf
 Add Chinese support.
 
 ```shell
-pandoc markdown/example.md -o pdf/example.pdf --from markdown --template eisvogel --latex-engine=xelatex -N --listings -V mainfont='PingFang SC'
+pandoc markdown/example.md -o pdf/example.pdf --from markdown --template eisvogel --pdf-engine=xelatex -N --listings -V mainfont='PingFang SC'
 ```
 
 #### preview
